@@ -32,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PromocoesComponent } from './shared/promocoes/promocoes.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DropdownUfComponent } from './shared/form-busca/dropdown-uf/dropdown-uf.component';
+import { DepoimentosComponent } from './shared/depoimentos/depoimentos.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { DropdownUfComponent } from './shared/form-busca/dropdown-uf/dropdown-uf
     ModalComponent,
     BotaoControleComponent,
     PromocoesComponent,
-    DropdownUfComponent
+    DropdownUfComponent,
+    DepoimentosComponent
   ],
   imports: [
     BrowserModule,
