@@ -30,8 +30,6 @@ Abra seu terminal do Desktop e execute os passos abaixo:
 
   * <strong>Para subir à API da aplicação :</strong><br />
     * Entre na pasta <strong>`api-jornada-milhas`</strong>. <br />
-    Rode o comando: <strong>`npm install`</strong>
-    para installar às dependências.
-    <br />
-    Execute o comando:
-  <strong>`npm run start:dev`</strong> para subir a Api.
+    * Rode o comando: <strong>`npm install`</strong>
+    para installar às dependências.<br />
+    * Execute o comando: <strong>`npm run start:dev`</strong> para subir a Api.
