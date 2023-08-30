@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { EstadosBr } from 'src/app/core/types/type';
 
@@ -10,6 +10,8 @@ import { EstadosBr } from 'src/app/core/types/type';
 export class FormUserComponent implements OnInit {
   cadastroForm!: FormGroup;
   estadoControl = new FormControl<EstadosBr | null>(null, Validators.required);
+  @Input() perfilComponent!: boolean;
+  @Output() acaoClique: EventEmitter<any> = new EventEmitter<any>;
 
   constructor(private formBuilder: FormBuilder) {}
 
@@ -28,5 +30,9 @@ export class FormUserComponent implements OnInit {
       confirmarSenha: [null, [Validators.required, Validators.minLength(3)]],
       aceitarTermos: [null, Validators.requiredTrue]
     });
+  }
+
+  executarAcao() {
+    this.acaoClique.emit();
   }
 }
