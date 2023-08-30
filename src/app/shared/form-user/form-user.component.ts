@@ -12,7 +12,7 @@ export class FormUserComponent implements OnInit {
   cadastroForm!: FormGroup;
   estadoControl = new FormControl<EstadosBr | null>(null, Validators.required);
   @Input() perfilComponent!: boolean;
-  @Output() acaoClique: EventEmitter<any> = new EventEmitter<any>;
+  @Output() acaoClique: EventEmitter<any> = new EventEmitter<any>();
 
   constructor(
     private formBuilder: FormBuilder,

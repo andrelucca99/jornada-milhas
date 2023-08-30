@@ -31,11 +31,16 @@ export class DropdownUfComponent implements OnInit {
     );
   }
 
-  filtrarUfs(value: string): EstadosBr[] {
-    const valorFiltrado = value?.toLowerCase();
+  filtrarUfs(value: string | EstadosBr): EstadosBr[] {
+    const nomeBr = typeof value === 'string' ? value : value?.nome;
+    const valorFiltrado = nomeBr?.toLowerCase();
     const result = this.estadosBr.filter((estado) =>
       estado.nome.toLowerCase().includes(valorFiltrado)
     );
     return result;
+  }
+
+  displayFn(estado: EstadosBr): string {
+    return estado && estado.nome ? estado.nome : '';
   }
 }
