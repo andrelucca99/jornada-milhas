@@ -1,3 +1,4 @@
+import { authGuard } from './core/guards/auth.guard';
 import { LoginComponent } from './pages/login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -20,7 +21,8 @@ const routes: Routes = [
   },
   {
     path: 'perfil',
-    component: PerfilComponent
+    component: PerfilComponent,
+    canActivate: [authGuard]
   },
 ];
 
