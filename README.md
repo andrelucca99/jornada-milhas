@@ -3,9 +3,11 @@
 Esse, projeto foi desenvolvido durante o curso de Angular da <a href="https://www.alura.com.br/" target="_blank">Alura</a>.
 ## Descrição:
 
-A empresa <strong>`Jornada Milhas`</strong>, é uma plataforma de venda de passagens aéreas, onde o desafio é desenvolver o layout fornecido pela a equipe de design da empresa, junto com a <strong>`API`</strong> que foi fornecida pelo time de Back-end.<br />
+A empresa <strong>`Jornada Milhas`</strong>, é uma plataforma de venda de passagens aéreas, onde o desafio é desenvolver o layout fornecido pela a equipe de design da empresa, junto com a `API` que foi fornecida pelo time de Back-end.<br />
 
-<strong>`1º etapa:`</strong> Foi conhecer a componentização do Angular, criando componentes reutilizáveis e organizando a aplicação, e utilizamos o Angular Material para criar interfaces modernas, com sua ampla variedade de componentes disponíveis.<br /> <strong>`2º etapa:`</strong> Foi focar em controlar e validar formulários no Angular utilizando <strong>`serviços`</strong>, <strong>`APIs`</strong> e utilizar técnicas avançadas do Angular, como o <strong>`providedIn`</strong> e o <strong>`cache`</strong> com <strong>`shareReplay`</strong>.
+<strong>`1º Etapa:`</strong> Foi conhecer a componentização do `Angular`, criando componentes reutilizáveis e organizando a aplicação, e utilizamos o `Angular Material` para criar interfaces modernas, com sua ampla variedade de componentes disponíveis.<br /> <strong>`2º Etapa:`</strong> Foi focar em controlar e validar formulários no Angular utilizando `serviços`, `APIs` e utilizar técnicas avançadas do Angular, como o `providedIn` e o `cache` com `shareReplay`.<br />
+<strong>`3º Etapa:`</strong> Implementamos as telas de login e cadastro de usuarios, para esse processo utilizamos a biblioteca  `JWT` (Json Web Token) para a autenticação de usuários e como proteger as rotas com a `Guarda de Rotas Funcional`.
+
 
 ## Tecnologias usadas no projeto:
  
