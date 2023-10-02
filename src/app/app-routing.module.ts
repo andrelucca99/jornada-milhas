@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
+import { BuscaComponent } from './pages/busca/busca.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
     component: PerfilComponent,
     canActivate: [authGuard]
   },
+  {
+    path: 'busca',
+    component: BuscaComponent
+  }
 ];
 
 @NgModule({

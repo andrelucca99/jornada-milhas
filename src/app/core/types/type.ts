@@ -29,3 +29,40 @@ export interface PessoaUsuaria {
   cidade: string,
   estado: EstadosBr
 }
+
+export interface Resultado {
+  paginaAtual: number;
+  ultimaPagina: number;
+  total: number;
+  precoMin: number;
+  precoMax: number;
+  resultado: Passagem[];
+}
+
+export interface Passagem {
+  tipo: string;
+  precoIda: number;
+  precoVolta: number;
+  taxaEmbarque: number;
+  conexoes: number;
+  tempoVoo: number;
+  origem: EstadosBr;
+  destino: EstadosBr;
+  companhia: Companhia;
+  dataIda: Date;
+  dataVolta: Date;
+  total: number;
+  orcamento: Orcamento[];
+}
+
+export interface Orcamento {
+  id: string;
+  nome: string;
+}
+
+export interface Companhia {
+  descricao: string;
+  preco: number;
+  taxaEmbarque: number;
+  total: number;
+}
