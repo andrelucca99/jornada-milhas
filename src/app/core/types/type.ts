@@ -1,33 +1,33 @@
 export interface Promocao {
-  id: number
-  destino: string
-  imagem: string
-  preco: number
+  id: number;
+  destino: string;
+  imagem: string;
+  preco: number;
 }
 
 export interface EstadosBr {
-  id: number
-  nome: string
-  sigla: string
+  id: number;
+  nome: string;
+  sigla: string;
 }
 
 export interface Depoimento {
-  id: number
-  texto: string
-  autor: string
-  avatar: string
+  id: number;
+  texto: string;
+  autor: string;
+  avatar: string;
 }
 
 export interface PessoaUsuaria {
-  nome: string,
-  nascimento: string,
-  cpf: string,
-  telefone: string,
-  email: string,
-  senha: string,
-  genero: string,
-  cidade: string,
-  estado: EstadosBr
+  nome: string;
+  nascimento: string;
+  cpf: string;
+  telefone: string;
+  email: string;
+  senha: string;
+  genero: string;
+  cidade: string;
+  estado: EstadosBr;
 }
 
 export interface Resultado {
@@ -55,12 +55,12 @@ export interface Passagem {
   orcamento: Orcamento[];
 }
 
-export interface Orcamento {
+export interface Companhia {
   id: string;
   nome: string;
 }
 
-export interface Companhia {
+export interface Orcamento {
   descricao: string;
   preco: number;
   taxaEmbarque: number;
