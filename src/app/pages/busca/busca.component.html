@@ -4,7 +4,7 @@
     alt="Banner da pagina de busca"
   />
   <app-container>
-    <app-form-busca></app-form-busca>
+    <app-form-busca (realizarBusca)="busca($event)"></app-form-busca>
     <section class="conteudo">
       <div class="passagens">
         <app-passagens
