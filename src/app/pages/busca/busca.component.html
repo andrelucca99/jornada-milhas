@@ -1,9 +1,17 @@
 <div class="busca-page">
-  <app-banner src="assets/imagens/banner-busca.png" alt="Banner da pagina de busca" />
+  <app-banner
+    src="assets/imagens/banner-busca.png"
+    alt="Banner da pagina de busca"
+  />
   <app-container>
     <app-form-busca></app-form-busca>
     <section class="conteudo">
-      Filtros, Cards de Recomendados e Cards de Passagens
+      <div class="passagens">
+        <app-passagens
+          *ngFor="let passagem of passagens"
+          [passagem]="passagem"
+        ></app-passagens>
+      </div>
     </section>
   </app-container>
 </div>
