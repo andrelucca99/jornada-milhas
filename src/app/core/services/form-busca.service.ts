@@ -63,12 +63,12 @@ export class FormBuscaService {
 
     const criancas = this.formBusca.get('criancas')?.value;
     if (criancas && criancas > 0) {
-      descricao += `${criancas} criança${criancas > 1 ? 's' : ''}`;
+      descricao += `${descricao ? ',' : ''}${criancas} criança${criancas > 1 ? 's' : ''}`;
     }
 
     const bebes = this.formBusca.get('bebes')?.value;
     if (bebes && bebes > 0) {
-      descricao += `${bebes} bebe${bebes > 1 ? 's' : ''}`;
+      descricao += `${descricao ? ',' : ''}${bebes} bebe${bebes > 1 ? 's' : ''}`;
     }
 
     return descricao;
@@ -125,7 +125,7 @@ export class FormBuscaService {
     const precoMaxControl = this.obterControle<number>('precoMax');
 
     if (precoMaxControl.value) {
-      dadosBusca.precoMin = precoMaxControl.value;
+      dadosBusca.precoMax = precoMaxControl.value;
     }
 
     return dadosBusca;
@@ -141,7 +141,9 @@ export class FormBuscaService {
   }
 
   openDialog() {
-    this.dialog.open(ModalComponent);
+    this.dialog.open(ModalComponent, {
+      width: '50%'
+    });
   }
 
   get formEstaValido() {

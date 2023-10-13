@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { TokenService } from './token.service';
-import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
+import { BehaviorSubject } from 'rxjs';
 import { PessoaUsuaria } from '../types/type';
 import jwt_decode from 'jwt-decode';
 
@@ -17,7 +17,7 @@ export class UserService {
     }
   }
 
-  decodificarJWT() {
+  private decodificarJWT() {
     const token = this.tokenService.retornarToken();
     const user = jwt_decode(token) as PessoaUsuaria;
     this.userSubject.next(user);

@@ -12,7 +12,7 @@ export class TokenService {
   }
 
   excluirToken() {
-    return localStorage.removeItem(KEY);
+    localStorage.removeItem(KEY);
   }
 
   retornarToken() {
