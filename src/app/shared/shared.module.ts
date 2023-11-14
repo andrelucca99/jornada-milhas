@@ -11,9 +11,11 @@ import { HeaderComponent } from './header/header.component';
 import { FormUserComponent } from './form-user/form-user.component';
 import { PassagensComponent } from './passagens/passagens.component';
 import { ContainerComponent } from './container/container.component';
+import { PromocoesComponent } from './promocoes/promocoes.component';
 import { FormBuscaComponent } from './form-busca/form-busca.component';
 import { CardBuscaComponent } from './card-busca/card-busca.component';
 import { DropdownUfComponent } from './dropdown-uf/dropdown-uf.component';
+import { DepoimentosComponent } from './depoimentos/depoimentos.component';
 import { BotaoControleComponent } from './botao-controle/botao-controle.component';
 import { CardDepoimentoComponent } from './card-depoimento/card-depoimento.component';
 import { LabelComponent } from './form-busca/filtros-complementares/label/label.component';
@@ -27,6 +29,8 @@ import { FiltrosComplementaresComponent } from './form-busca/filtros-complementa
   declarations: [
     HeaderComponent,
     BannerComponent,
+    PromocoesComponent,
+    DepoimentosComponent,
     CardComponent,
     ContainerComponent,
     FooterComponent,
@@ -53,6 +57,8 @@ import { FiltrosComplementaresComponent } from './form-busca/filtros-complementa
   exports: [
     HeaderComponent,
     BannerComponent,
+    PromocoesComponent,
+    DepoimentosComponent,
     CardComponent,
     ContainerComponent,
     FooterComponent,
