@@ -2,9 +2,8 @@ import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 
 import { PessoaUsuaria } from 'src/app/core/types/type';
-import { CadastroService } from 'src/app/autenticacao/services/cadastro.service';
-// import { FormularioService } from '../../core/services/formulario.service';
 import { FormularioService } from 'src/app/core/services/formulario.service';
+import { CadastroService } from 'src/app/autenticacao/services/cadastro.service';
 
 @Component({
   selector: 'app-cadastro',

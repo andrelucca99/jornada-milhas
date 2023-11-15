@@ -1,5 +1,6 @@
-import { take } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
+
+import { take } from 'rxjs/operators';
 
 import { DadosBusca, Passagem, Destaques } from 'src/app/core/types/type';
 import { PassagensService } from 'src/app/busca/services/passagens.service';

@@ -1,10 +1,11 @@
-import { authGuard } from './autenticacao/auth.guard';
-import { LoginComponent } from './autenticacao/login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { authGuard } from './autenticacao/auth.guard';
+
 import { HomeComponent } from './home/home.component';
 import { BuscaComponent } from './busca/busca.component';
+import { LoginComponent } from './autenticacao/login/login.component';
 import { PerfilComponent } from './autenticacao/perfil/perfil.component';
 import { CadastroComponent } from './autenticacao/cadastro/cadastro.component';
 

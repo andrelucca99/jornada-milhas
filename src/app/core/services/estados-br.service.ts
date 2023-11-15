@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Observable, shareReplay } from 'rxjs';
-import { environment } from 'src/environments/environment';
-import { EstadosBr } from '../types/type';
 import { HttpClient } from '@angular/common/http';
+
+import { Observable, shareReplay } from 'rxjs';
+
+import { EstadosBr } from '../types/type';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'

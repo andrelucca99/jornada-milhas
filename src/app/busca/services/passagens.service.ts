@@ -1,7 +1,9 @@
-import { Observable, take } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
-import { environment } from '../../../environments/environment';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+import { Observable, take } from 'rxjs';
+
+import { environment } from '../../../environments/environment';
 import { DadosBusca, Destaques, Passagem, Resultado } from '../../core/types/type';
 
 @Injectable({

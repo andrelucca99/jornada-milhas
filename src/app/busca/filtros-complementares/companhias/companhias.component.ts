@@ -1,8 +1,9 @@
-import { FormBuscaService } from 'src/app/shared/services/form-busca.service';
-import { CompanhiaService } from '../../services/companhia.service';
-import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+
 import { Companhia } from 'src/app/core/types/type';
+import { CompanhiaService } from '../../services/companhia.service';
+import { FormBuscaService } from 'src/app/shared/services/form-busca.service';
 
 @Component({
   selector: 'app-companhias',

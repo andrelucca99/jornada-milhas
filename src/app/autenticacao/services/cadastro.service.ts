@@ -1,7 +1,9 @@
-import { PessoaUsuaria } from '../../core/types/type';
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+import { Observable } from 'rxjs';
+
+import { PessoaUsuaria } from '../../core/types/type';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
