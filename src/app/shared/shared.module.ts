@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { MaterialModule } from '../core/material/material.module';
@@ -37,7 +38,8 @@ import { SeletorPassageiroComponent } from './seletor-passageiro/seletor-passage
   imports: [
     CommonModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   exports: [
     BannerComponent,
