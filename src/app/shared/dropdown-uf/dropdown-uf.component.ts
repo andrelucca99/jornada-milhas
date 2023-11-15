@@ -1,8 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+
 import { Observable, map, startWith } from 'rxjs';
-import { EstadosBrService } from 'src/app/core/services/estados-br.service';
-import { EstadosBr } from 'src/app/core/types/type';
+
+import { EstadosBr } from '../../core/types/type';
+import { EstadosBrService } from '../../core/services/estados-br.service';
 
 @Component({
   selector: 'app-dropdown-uf',

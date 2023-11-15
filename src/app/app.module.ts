@@ -1,45 +1,43 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { HomeModule } from './home/home.module';
+import { BuscaModule } from './busca/busca.module';
 import { SharedModule } from './shared/shared.module';
-import { HomeModule } from './pages/home/home.module';
+import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './core/material/material.module';
-
-import { ReactiveFormsModule } from '@angular/forms';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { AutenticacaoInterceptor } from './core/interceptors/autenticacao.interceptor';
+import { AutenticacaoModule } from './autenticacao/autenticacao.module';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './pages/login/login.component';
-import { BuscaComponent } from './pages/busca/busca.component';
-import { PerfilComponent } from './pages/perfil/perfil.component';
-import { CadastroComponent } from './pages/cadastro/cadastro.component';
+
+import { AutenticacaoInterceptor } from './autenticacao/autenticacao.interceptor';
+
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    CadastroComponent,
-    PerfilComponent,
-    BuscaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
     SharedModule,
     MaterialModule,
     HomeModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    ReactiveFormsModule,
+    AutenticacaoModule,
+    BuscaModule
   ],
-  providers: [{
-    provide: HTTP_INTERCEPTORS,
-    useClass: AutenticacaoInterceptor,
-    multi: true
-  }],
-  bootstrap: [AppComponent]
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AutenticacaoInterceptor,
+      multi: true,
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,8 +1,9 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
-import { FormularioService } from 'src/app/core/services/formulario.service';
-import { EstadosBr } from 'src/app/core/types/type';
+
+import { EstadosBr } from '../../core/types/type';
 import { FormValidations } from '../form-validations';
+import { FormularioService } from '../../core/services/formulario.service';
 
 @Component({
   selector: 'app-form-user',
