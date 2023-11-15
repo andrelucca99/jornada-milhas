@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { Component } from '@angular/core';
-import { UserService } from '../../autenticacao/services/user.service';
+import { UserService } from 'src/app/autenticacao/services/user.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -16,6 +16,6 @@ export class HeaderComponent {
 
   logout() {
     this.userService.logout();
-    this.router.navigate(['/']);
+    this.router.navigate(['/login']);
   }
 }
