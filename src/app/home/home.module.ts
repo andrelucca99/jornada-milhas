@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
+import { HomeRoutingModule } from './home-rounting.module';
 import { SharedModule } from "src/app/shared/shared.module";
 import { MaterialModule } from "src/app/core/material/material.module";
 
@@ -17,7 +18,8 @@ import { DepoimentosComponent } from './depoimentos/depoimentos.component';
   imports: [
     CommonModule,
     MaterialModule,
-    SharedModule
+    SharedModule,
+    HomeRoutingModule
   ],
   exports: [
     HomeComponent
