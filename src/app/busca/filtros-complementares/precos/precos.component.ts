@@ -9,15 +9,15 @@ import { FormBuscaService } from 'src/app/shared/services/form-busca.service';
   styleUrls: ['./precos.component.scss']
 })
 export class PrecosComponent {
-  precoMin: FormControl<number>
-  precoMax: FormControl<number>
+  precoMin: FormControl<number>;
+  precoMax: FormControl<number>;
 
   constructor(
     public passagensService: PassagensService,
     private formBuscaService: FormBuscaService
   ) {
-    this.precoMin = this.formBuscaService.obterControle<number>('precoMin')
-    this.precoMax = this.formBuscaService.obterControle<number>('precoMax')
+    this.precoMin = this.formBuscaService.obterControle<number>('precoMin');
+    this.precoMax = this.formBuscaService.obterControle<number>('precoMax');
   }
 
 }

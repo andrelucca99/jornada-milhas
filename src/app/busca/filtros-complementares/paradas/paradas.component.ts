@@ -12,7 +12,7 @@ interface OpcoesDeParada {
   styleUrls: ['./paradas.component.scss']
 })
 export class ParadasComponent implements OnInit{
-  opcoesSelecionadas: OpcoesDeParada | null = null
+  opcoesSelecionadas: OpcoesDeParada | null = null;
   opcoes: OpcoesDeParada[] = [
     {
       display: "Direto",
@@ -30,8 +30,8 @@ export class ParadasComponent implements OnInit{
       display: "Mais de 2 conexões",
       value: "3"
     },
-  ]
-  conexoesControl: FormControl<number | null>
+  ];
+  conexoesControl: FormControl<number | null>;
 
   constructor(private formBuscaService: FormBuscaService) {
     this.conexoesControl = this.formBuscaService.obterControle<number>('conexoes');
@@ -39,9 +39,9 @@ export class ParadasComponent implements OnInit{
   ngOnInit() {
     this.conexoesControl.valueChanges.subscribe((value) => {
       if (value === null) {
-        this.opcoesSelecionadas = null
+        this.opcoesSelecionadas = null;
       }
-    })
+    });
   }
 
   alternarParada(opcao: OpcoesDeParada, checked: boolean) {
@@ -49,13 +49,13 @@ export class ParadasComponent implements OnInit{
       this.opcoesSelecionadas = null;
       this.formBuscaService.formBusca.patchValue({
         conexoes: null
-      })
-      return
+      });
+      return;
     }
     this.opcoesSelecionadas = opcao;
     this.formBuscaService.formBusca.patchValue({
       conexoes: Number(opcao.value)
-    })
+    });
   }
 
   paradaSelecionada(opcao: OpcoesDeParada): boolean {
@@ -66,6 +66,6 @@ export class ParadasComponent implements OnInit{
     if (!this.opcoesSelecionadas) {
       return false;
     }
-    return this.opcoesSelecionadas.value > opcao.value
+    return this.opcoesSelecionadas.value > opcao.value;
   }
 }

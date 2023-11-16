@@ -23,9 +23,9 @@ export class FiltrosComplementaresComponent {
         left: 0,
         behavior: 'smooth'
       });
-      return
+      return;
     }
-    this.realizarBusca.emit(this.formBuscaService.obterDadosDeBusca())
+    this.realizarBusca.emit(this.formBuscaService.obterDadosDeBusca());
   }
 
   limparFiltros() {
@@ -34,6 +34,6 @@ export class FiltrosComplementaresComponent {
       companhias: null,
       precoMin: this.passagensService.precoMin,
       precoMax: this.passagensService.precoMax,
-    })
+    });
   }
 }

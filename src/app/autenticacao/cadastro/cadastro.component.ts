@@ -30,7 +30,7 @@ export class CadastroComponent {
           this.router.navigate(['auth/login']);
         },
         error: (err) => {
-          console.log('Erro ao realizar cadastro.', formCadastro);
+          console.log(`Erro ao realizar cadastro. ${err}`, formCadastro);
         },
       });
     }

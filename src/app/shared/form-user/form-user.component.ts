@@ -14,10 +14,10 @@ export class FormUserComponent implements OnInit {
   cadastroForm!: FormGroup;
   estadoControl = new FormControl<EstadosBr | null>(null, Validators.required);
   @Input() perfilComponent = false;
-  @Input() titulo: string = 'Crie sua conta';
-  @Input() textoBotao: string = 'CADASTRAR';
-  @Output() acaoClique: EventEmitter<any> = new EventEmitter<any>();
-  @Output() sair: EventEmitter<any> = new EventEmitter<any>();
+  @Input() titulo = 'Crie sua conta';
+  @Input() textoBotao = 'CADASTRAR';
+  @Output() acaoClique: EventEmitter<void> = new EventEmitter<void>();
+  @Output() sair: EventEmitter<void> = new EventEmitter<void>();
 
   constructor(
     private formBuilder: FormBuilder,

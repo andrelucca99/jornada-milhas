@@ -14,6 +14,6 @@ export class PromocoesComponent implements OnInit {
   ngOnInit(): void {
     this.service.listar().subscribe(res => {
       this.promocoes = res;
-    })
+    });
   }
 }

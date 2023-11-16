@@ -40,7 +40,7 @@ export class BuscaComponent implements OnInit {
       this.formBuscaService.formBusca.patchValue({
         precoMin: res.precoMin,
         precoMax: res.precoMax,
-      })
+      });
     });
   }
 

@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { PessoaUsuaria } from 'src/app/core/types/type';
 import { UserService } from 'src/app/autenticacao/services/user.service';
 import { TokenService } from 'src/app/autenticacao/services/token.service';
-import { FormularioService } from 'src/app/core/services/formulario.service'
+import { FormularioService } from 'src/app/core/services/formulario.service';
 import { CadastroService } from 'src/app/autenticacao/services/cadastro.service';
 
 @Component({
@@ -21,7 +21,7 @@ export class PerfilComponent implements OnInit {
   token = '';
   nome = '';
   cadastro!: PessoaUsuaria;
-  form!: FormGroup<any> | null;
+  form!: FormGroup | null;
 
   constructor(
     private tokenService: TokenService,
@@ -37,7 +37,7 @@ export class PerfilComponent implements OnInit {
       this.cadastro = cadastro;
       this.nome = this.cadastro.nome;
       this.carregarFormulario();
-    })
+    });
   }
 
   carregarFormulario() {
@@ -52,7 +52,7 @@ export class PerfilComponent implements OnInit {
       genero: this.cadastro.genero,
       cidade: this.cadastro.cidade,
       estado: this.cadastro.estado
-    })
+    });
   }
 
   deslogar() {
@@ -71,7 +71,7 @@ export class PerfilComponent implements OnInit {
       genero: this.form?.value.genero,
       cidade: this.form?.value.cidade,
       estado: this.form?.value.estado
-    }
+    };
 
     this.cadastroService.editarCadastro(dadosAtualizados).subscribe({
       next: () => {
@@ -81,6 +81,6 @@ export class PerfilComponent implements OnInit {
       error: (err) => {
         console.log('Erro ao atualizar cadastro', err);
       }
-    })
+    });
   }
 }

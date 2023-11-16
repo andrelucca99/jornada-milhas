@@ -18,11 +18,12 @@ export class HomeComponent implements OnInit {
     this.servicoPromocao.listar()
       .subscribe(
         resposta => {
-          console.log(resposta)
+          console.log(resposta);
         }
-      )
+      );
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any
   navegarParaBusca(ev: any) {
     this.router.navigate(['busca']);
   }
