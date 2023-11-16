@@ -5,6 +5,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HomeModule } from './home/home.module';
+import { ErroModule } from './core/erro/erro.module';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './core/material/material.module';
@@ -26,6 +27,7 @@ import { AutenticacaoInterceptor } from './autenticacao/autenticacao.interceptor
     SharedModule,
     MaterialModule,
     HomeModule,
+    ErroModule
   ],
   providers: [
     {
