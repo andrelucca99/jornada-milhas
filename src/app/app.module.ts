@@ -12,6 +12,7 @@ import { MaterialModule } from './core/material/material.module';
 
 import { AppComponent } from './app.component';
 
+import { ErrosInterceptor } from './core/erro/erros.interceptor';
 import { AutenticacaoInterceptor } from './autenticacao/autenticacao.interceptor';
 
 @NgModule({
@@ -33,6 +34,11 @@ import { AutenticacaoInterceptor } from './autenticacao/autenticacao.interceptor
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AutenticacaoInterceptor,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrosInterceptor,
       multi: true,
     },
   ],

@@ -26,6 +26,6 @@ export class EstadosBrService {
   }
 
   private requestEstados(): Observable<EstadosBr[]> {
-    return this.http.get<EstadosBr[]>(`${this.apiUrl}/estados`);
+    return this.http.get<EstadosBr[]>(`${this.apiUrl}/estad`);
   }
 }

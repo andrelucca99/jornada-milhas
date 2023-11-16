@@ -12,6 +12,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -34,7 +35,8 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     MatRadioModule,
     MatDividerModule,
     MatCheckboxModule,
-    MatSliderModule
+    MatSliderModule,
+    MatSnackBarModule
   ]
 })
 
