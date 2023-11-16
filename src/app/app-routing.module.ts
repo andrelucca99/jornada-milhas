@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { BuscaComponent } from './busca/busca.component';
-
 const routes: Routes = [
   {
     path: '',
@@ -15,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'busca',
-    component: BuscaComponent,
+    loadChildren: () => import('./busca/busca.module').then(m => m.BuscaModule)
   },
 ];
 

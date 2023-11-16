@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { SharedModule } from '../shared/shared.module';
+import { BuscaRoutingModule } from './busca-routing.module';
 import { MaterialModule } from '../core/material/material.module';
 
 import { BuscaComponent } from './busca.component';
@@ -30,7 +31,8 @@ import { FiltrosComplementaresComponent } from './filtros-complementares/filtros
     CommonModule,
     SharedModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BuscaRoutingModule
   ],
   exports: [
     BuscaComponent,
