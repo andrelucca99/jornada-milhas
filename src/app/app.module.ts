@@ -9,7 +9,6 @@ import { BuscaModule } from './busca/busca.module';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './core/material/material.module';
-import { AutenticacaoModule } from './autenticacao/autenticacao.module';
 
 import { AppComponent } from './app.component';
 
@@ -28,7 +27,6 @@ import { AutenticacaoInterceptor } from './autenticacao/autenticacao.interceptor
     SharedModule,
     MaterialModule,
     HomeModule,
-    AutenticacaoModule,
     BuscaModule
   ],
   providers: [
