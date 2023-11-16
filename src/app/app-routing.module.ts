@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { authGuard } from './autenticacao/auth.guard';
 
-import { HomeComponent } from './home/home.component';
 import { BuscaComponent } from './busca/busca.component';
 import { LoginComponent } from './autenticacao/login/login.component';
 import { PerfilComponent } from './autenticacao/perfil/perfil.component';
@@ -12,7 +11,8 @@ import { CadastroComponent } from './autenticacao/cadastro/cadastro.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    redirectTo: '/home',
+    pathMatch: 'full'
   },
   {
     path: 'login',
